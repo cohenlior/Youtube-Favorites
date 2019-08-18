@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/favoritesListFragment" android:label="Searching on YouTube">
+
+    <fragment android:id="@+id/favoritesListFragment"
+              android:name="com.example.android.youtubefavorites.favorites.FavoritesFragment"
+              android:label="My favorites"
+              tools:layout="@layout/fragment_favorites_list">
+        <action android:id="@+id/action_favoritesListFragment_to_searchFragment" app:destination="@id/searchFragment"
+                app:popExitAnim="@anim/slide_out_right"
+                app:enterAnim="@anim/slide_in_left" app:popEnterAnim="@anim/slide_in_left"/>
+    </fragment>
+    <fragment android:id="@+id/searchFragment" android:name="com.example.android.youtubefavorites.search.SearchFragment"
+              android:label="Searching on YouTube">
+        <action android:id="@+id/action_searchFragment_to_detailFragment" app:destination="@id/detailFragment"/>
+    </fragment>
+    <fragment android:id="@+id/detailFragment" android:name="com.example.android.youtubefavorites.detail.DetailFragment"
+              android:label="Video information">
+        <argument android:name="selectedVideo" app:argType="com.example.android.youtubefavorites.domain.Video"/>
+    </fragment>
+</navigation>
