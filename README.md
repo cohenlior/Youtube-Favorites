@@ -4,7 +4,7 @@
 
 ### 1. This app is wirtten in Kotlin.
 
-### 2. The app follows the app architecture components suggested by google. (Navigation, ViewModel, LiveData and Room)
+### 2. The app follows the app Architecture Components suggested by google. (Navigation, ViewModel, LiveData and Room)
 
 ### 3. This app perform network calls using Retrofit2 and Kotlin Coroutines for asynchronous and non-blocking behavior.
 
